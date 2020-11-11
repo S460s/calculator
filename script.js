@@ -47,6 +47,7 @@ function displayNumbers() {
         displayText.textContent = ""
       }
 
+
       else if (button.value === "=") {
 
         if (num1 != undefined && num2 != undefined && sign != undefined) {
@@ -83,13 +84,24 @@ function displayNumbers() {
           if (num2 === undefined) {
             displayText.textContent = ""
           }
-          displayText.textContent += button.value
-          num2 = displayText.textContent
-          console.log(num1, num2, sign)
 
+          if (displayText.textContent.length > 15) {
+            alert("You can't enter more numbers.")
+          }
+          else {
+            displayText.textContent += button.value
+            num2 = displayText.textContent
+            console.log(num1, num2, sign)
+          }
         }
 
+        else if (displayText.textContent.length > 15) {
+          alert("You can't enter more numbers.")
+        }
+
+
         else {
+
           displayText.textContent += button.value;
           num1 = displayText.textContent
           console.log(num1, num2)

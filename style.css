@@ -5,19 +5,25 @@
   max-height: 850px;
   margin: auto;
   margin-top: 3%;
-  border: red 5px solid;
+  border: black solid;
 
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(6, 130px);
+  grid-template-rows: repeat(6, 10vh);
 }
 
 #display {
   border: solid black 2px;
-  font-size: 2vmax;
+  font-size: 4vh;
 
   grid-column-start: 1;
   grid-column-end: 5;
+
+}
+#displayText{
+  float: right;
+  position: relative;
+  padding-top: 1vh;
 }
 
 #z0 {
@@ -27,5 +33,5 @@
 
 button {
   font-size: 2vmax;
-  border: chartreuse 2px solid;
+  border: black 2px solid;
 }
