@@ -1,14 +1,15 @@
 #calculator {
   width: 60%;
+  height: 40%;
   max-width: 500px;
-  max-height: 750px;
+  max-height: 850px;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 3%;
   border: red 5px solid;
 
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(6, 8vmax);
+  grid-template-rows: repeat(6, 130px);
 }
 
 #display {
