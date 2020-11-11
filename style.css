@@ -1,5 +1,5 @@
 body{
-  background: linear-gradient(90deg, rgb(240, 243, 248), rgb(222, 224, 221));
+  background: linear-gradient(90deg, rgb(218, 231, 255), rgb(241, 241, 241));
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -10,7 +10,7 @@ body{
   max-height: 850px;
   margin: auto;
   margin-top: 15vh;
-  border: black solid;
+  border: rgba(52, 66, 71, 0.849) 2px solid;
 
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -18,7 +18,7 @@ body{
 }
 
 #display {
-  border: solid black 2px;
+  border: solid rgba(52, 66, 71, 0.849) 2px;
   font-size: 4.5vh;
   background-color: rgb(190, 210, 226);
 
@@ -26,6 +26,7 @@ body{
   grid-column-end: 5;
 
 }
+
 #displayText{
   float: right;
 }
@@ -34,12 +35,23 @@ body{
   grid-column-start: 1;
   grid-column-end: 4;
 }
+
+
 .number{
   background-color: rgb(138, 155, 172);
 }
 
 button {
   font-size: 2vmax;
-  border: black 2px solid;
+  border: rgba(52, 66, 71, 0.849) 2px solid;
   background-color: rgb(165, 186, 203);
+  
+}
+
+button:active{
+  background-color: rgb(138, 155, 172,0.8)
+}
+
+.number:active{
+  background-color:  rgb(138, 155, 172,0.8);
 }
