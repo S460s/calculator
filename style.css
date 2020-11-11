@@ -1,10 +1,15 @@
+body{
+  background: linear-gradient(90deg, rgb(240, 243, 248), rgb(222, 224, 221));
+  font-family: 'Roboto Mono', monospace;
+}
+
 #calculator {
   width: 60%;
   height: 40%;
   max-width: 500px;
   max-height: 850px;
   margin: auto;
-  margin-top: 3%;
+  margin-top: 15vh;
   border: black solid;
 
   display: grid;
@@ -14,7 +19,8 @@
 
 #display {
   border: solid black 2px;
-  font-size: 4vh;
+  font-size: 4.5vh;
+  background-color: rgb(190, 210, 226);
 
   grid-column-start: 1;
   grid-column-end: 5;
@@ -22,16 +28,18 @@
 }
 #displayText{
   float: right;
-  position: relative;
-  padding-top: 1vh;
 }
 
 #z0 {
   grid-column-start: 1;
   grid-column-end: 4;
 }
+.number{
+  background-color: rgb(138, 155, 172);
+}
 
 button {
   font-size: 2vmax;
   border: black 2px solid;
+  background-color: rgb(165, 186, 203);
 }

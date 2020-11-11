@@ -116,4 +116,3 @@ function displayNumbers() {
 }
 
 displayNumbers();
-
