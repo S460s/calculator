@@ -28,13 +28,36 @@ function operate(sign, num1, num2) {
 
 let display = document.querySelector("#display");
 let displayText = document.querySelector("#displayText");
-let displayValue = [];
 let buttons = document.querySelectorAll("button");
 
 function displayNumbers() {
+  let num1
+  let num2
+  let sign
+
   buttons.forEach((button) => {
+
+
     button.addEventListener("click", () => {
-      displayText.textContent = button.value;
+
+      if (!+button.value) {
+        sign = button.value
+        console.log(sign)
+      }
+      else {
+
+        if (sign !== undefined) {
+
+          num2 === undefined ? displayText.textContent = "" : console.log("good")
+          displayText.textContent += button.value
+          num2 = displayText.textContent
+
+        }
+        else {
+          displayText.textContent += button.value;
+          num1 = displayText.textContent
+        }
+      }
     });
   });
 }
