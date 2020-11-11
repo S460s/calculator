@@ -1,20 +1,30 @@
-#calculator{
+#calculator {
   width: 60%;
+  max-width: 500px;
+  max-height: 750px;
   margin: auto;
+  margin-top: 5%;
   border: red 5px solid;
 
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(6,10vmax);
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(6, 8vmax);
 }
 
-#display{
+#display {
   border: solid black 2px;
+  font-size: 2vmax;
 
   grid-column-start: 1;
   grid-column-end: 5;
 }
-#z0{
+
+#z0 {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+button {
+  font-size: 2vmax;
+  border: chartreuse 2px solid;
 }
