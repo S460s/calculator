@@ -4,6 +4,7 @@ let buttons = document.querySelectorAll("button");
 let num1
 let num2
 let sign
+let possibleSigns = ["*", "/", "+", "-", "Enter", "Delete"]
 
 
 function add(num1, num2) {
@@ -44,14 +45,13 @@ function operate(sign, num1, num2) {
 function calculatorLogic(char) {
 
 
-  let possibleSigns = ["*", "/", "+", "-"]
   if (char === "clear") {
     num2 = undefined
     num1 = undefined
     sign = undefined
     displayText.textContent = ""
   }
-  else if (char === "=") {
+  else if (char === "Enter") {
 
     if (num1 != undefined && num2 != undefined && sign != undefined) {
 
@@ -61,7 +61,7 @@ function calculatorLogic(char) {
       console.log(sign, num2, num1)
     }
   }
-  else if (char == "ce") {
+  else if (char == "Delete") {
     len = displayText.textContent.length
     num1 = displayText.textContent = displayText.textContent.slice(0, len - 1)
 
@@ -116,4 +116,17 @@ function displayNubers() {
     })
   });
 }
+
+function keyboardSupport() {
+  document.addEventListener("keypress", function (e) {
+    console.log(e.key)
+    if (e.key - e.key == 0 || possibleSigns.includes(e.key)) {
+      calculatorLogic(e.key)
+    }
+  })
+}
+
+
+
 displayNubers()
+keyboardSupport()
