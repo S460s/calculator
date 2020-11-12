@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculator</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <div id="calculator">
+      <div id="display">
+        <p id="displayText"></p>
+      </div>
 
-<body>
-  <div id="calculator">
-    <div id="display">
-      <p id="displayText"></p>
+      <button value="clear">C</button>
+      <button value="Delete">CE</button>
+      <button value=".">.</button>
+      <button value="/">/</button>
+      <button class="number" value="7">7</button>
+      <button class="number" value="8">8</button>
+      <button class="number" value="9">9</button>
+      <button value="*">*</button>
+      <button class="number" value="4">4</button>
+      <button class="number" value="5">5</button>
+      <button class="number" value="6">6</button>
+      <button value="-">-</button>
+      <button class="number" value="1">1</button>
+      <button class="number" value="2">2</button>
+      <button class="number" value="3">3</button>
+      <button value="+">+</button>
+      <button class="number" value="0" id="z0">0</button>
+      <button value="Enter">=</button>
     </div>
+    <p id="text">
+      There is keyboard support. To delete one number press the delete button.
+      To clear press Ctrl+delete.
+    </p>
 
-    <button value="clear">C</button>
-    <button value="Delete">CE</button>
-    <button value=".">.</button>
-    <button value="/">/</button>
-    <button class="number" value="7">7</button>
-    <button class="number" value="8">8</button>
-    <button class="number" value="9">9</button>
-    <button value="*">*</button>
-    <button class="number" value="4">4</button>
-    <button class="number" value="5">5</button>
-    <button class="number" value="6">6</button>
-    <button value="-">-</button>
-    <button class="number" value="1">1</button>
-    <button class="number" value="2">2</button>
-    <button class="number" value="3">3</button>
-    <button value="+">+</button>
-    <button class="number" value="0" id="z0">0</button>
-    <button value="Enter">=</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
