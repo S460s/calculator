@@ -45,12 +45,22 @@ function calculatorLogic(char) {
     num1 = undefined;
     sign = undefined;
     displayText.textContent = "";
-  } else if (char === "Enter") {
-    if (num1 != undefined && num2 != undefined && sign != undefined) {
-      displayText.textContent = operate(sign, +num1, +num2);
-      num1 = displayText.textContent;
-      num2 = sign = undefined;
+  } else if (
+    possibleSigns.includes(char) &&
+    num1 != undefined &&
+    num2 != undefined &&
+    sign != undefined
+  ) {
+    displayText.textContent = operate(sign, +num1, +num2);
+    num1 = displayText.textContent;
+    num2 = undefined;
+
+    if (char != "Enter") {
+      sign = char;
+    } else {
+      sign = undefined;
     }
+    console.log(char, sign, num1, num2);
   } else if (char == "Delete") {
     len = displayText.textContent.length;
     num1 = displayText.textContent = displayText.textContent.slice(0, len - 1);
