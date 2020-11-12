@@ -120,13 +120,14 @@ function displayNubers() {
 function keyboardSupport() {
   document.addEventListener("keypress", function (e) {
     console.log(e.key)
-    if (e.key - e.key == 0 || possibleSigns.includes(e.key)) {
+    if (e.ctrlKey && e.key === 'Delete') {
+      calculatorLogic("clear");
+    }
+
+    else if (e.key - e.key == 0 || possibleSigns.includes(e.key)) {
       calculatorLogic(e.key)
     }
   })
 }
-
-
-
 displayNubers()
 keyboardSupport()
