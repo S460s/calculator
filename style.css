@@ -1,10 +1,10 @@
 body {
-  background: linear-gradient(90deg, rgb(161, 175, 197), rgb(241, 241, 241));
+  background: linear-gradient(90deg, rgb(67, 97, 238), rgb(142, 202, 230));
   font-family: "Roboto Mono", monospace;
 }
 
 #calculator {
-  width: 60%;
+  width: 65%;
   height: 40%;
   max-width: 500px;
   max-height: 850px;
@@ -19,7 +19,8 @@ body {
 #display {
   border: solid rgba(52, 66, 71, 0.849) 2px;
   font-size: 4.5vh;
-  background-color: rgb(190, 210, 226);
+  max-width: 500px;
+  background-color: rgb(76, 201, 240);
   grid-column-start: 1;
   grid-column-end: 5;
 }
@@ -34,22 +35,31 @@ body {
 }
 
 .number {
-  background-color: rgb(138, 155, 172);
+  background-color: rgb(33, 158, 188);
 }
 
 button {
   font-size: 2vmax;
   border: rgba(52, 66, 71, 0.849) 2px solid;
-  background-color: rgb(165, 186, 203);
+  background-color: rgb(142, 202, 230);
+  outline: rgb(58, 12, 163);
 }
 
 button:active {
-  background-color: rgb(138, 155, 172, 0.8);
+  background-color: rgb(76, 201, 240, 0.8);
 }
 
 .number:active {
-  background-color: rgb(138, 155, 172, 0.8);
+  background-color: rgb(76, 201, 240, 0.8);
 }
+.del:active {
+  background-color: rgb(242, 150, 89);
+}
+
 #text {
   text-align: center;
+}
+
+.del {
+  background-color: rgba(242, 149, 89, 0.9);
 }

@@ -4,7 +4,7 @@ let buttons = document.querySelectorAll("button");
 let num1;
 let num2;
 let sign;
-let possibleSigns = ["*", "/", "+", "-", "Enter", "Delete"];
+let possibleSigns = ["*", "/", "+", "-", "Enter", "Backspace"];
 
 function add(num1, num2) {
   return num1 + num2;
@@ -61,7 +61,7 @@ function calculatorLogic(char) {
       sign = undefined;
     }
     console.log(char, sign, num1, num2);
-  } else if (char == "Delete") {
+  } else if (char == "Backspace") {
     len = displayText.textContent.length;
     num1 = displayText.textContent = displayText.textContent.slice(0, len - 1);
   } else if (char == ".") {
@@ -100,8 +100,9 @@ function displayNumbers() {
 }
 
 function keyboardSupport() {
-  document.addEventListener("keypress", function (e) {
-    if (e.ctrlKey && e.key === "Delete") {
+  document.addEventListener("keydown", function (e) {
+    console.log(e.key);
+    if (e.ctrlKey && e.key === "Backspace") {
       calculatorLogic("clear");
     } else if (e.key - e.key == 0 || possibleSigns.includes(e.key)) {
       calculatorLogic(e.key);
