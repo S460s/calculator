@@ -101,7 +101,6 @@ function displayNumbers() {
 
 function keyboardSupport() {
   document.addEventListener("keydown", function (e) {
-    console.log(e.key);
     if (e.ctrlKey && e.key === "Backspace") {
       calculatorLogic("clear");
     } else if (e.key - e.key == 0 || possibleSigns.includes(e.key)) {
